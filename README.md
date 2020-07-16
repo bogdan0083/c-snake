@@ -27,4 +27,8 @@ Just run `run-windows.bat` in `snake` folder and you are good to go! All the nec
    
 2. Open a `snake` folder and run `run-linux.sh`
 
+## More games
+Wanna try more games? Check out [Tiny C Games repository](https://github.com/superjer/tinyc.games) to find more mini games.
+
 ## Thanks
+This project is inspired by @superjer and his [tinyc.games](https://github.com/superjer/tinyc.games) repo. 
