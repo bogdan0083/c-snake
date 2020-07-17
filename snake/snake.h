@@ -41,7 +41,7 @@ struct snake_s {
 
     void (*draw_collision_rect)(struct snake_s *snake, struct snakepart_s *part, struct SDL_Renderer *ren);
 
-    void (*add_part)(struct snake_s *snake, enum direction_e *direction);
+    void (*add_part)(struct snake_s *snake, enum direction_e direction);
 
     void (*update_position)(struct snake_s *snake, struct SDL_Renderer *ren);
 
@@ -49,10 +49,10 @@ struct snake_s {
 
     void (*update_collision_rect)(struct snake_s *snake, struct snakepart_s *snake_part);
 
-    void (*change_direction)(struct snake_s *snake, enum direction_e *new_direction);
+    void (*change_direction)(struct snake_s *snake, enum direction_e new_direction);
 
     void
-    (*change_part_direction)(struct snake_s *snake, struct snakepart_s *snake_part, enum direction_e *new_direction);
+    (*change_part_direction)(struct snake_s *snake, struct snakepart_s *snake_part, enum direction_e new_direction);
 
     void (*replace_snakepart_with_clone)(struct snake_s *snake, struct snakepart_s *snake_part);
 
@@ -74,7 +74,7 @@ struct snake_s {
 
     bool (*is_tail)(struct snake_s *snake, struct snakepart_s *snake_part);
 
-    bool (*is_opposite_direction)(struct snake_s *snake, enum direction_e *new_direction);
+    bool (*is_opposite_direction)(struct snake_s *snake, enum direction_e new_direction);
 
     bool (*is_snakepart_out_of_bounds)(struct snake_s *snake, struct snakepart_s *snake_part);
 
