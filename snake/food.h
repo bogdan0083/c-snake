@@ -9,6 +9,7 @@
 #include <stdio.h>
 #define SDL_DISABLE_IMMITRIN_H
 #include <SDL.h>
+#include "defs.h"
 #include "snake.h"
 #include "game.h"
 
@@ -23,5 +24,7 @@ struct food_s {
     void (*set_position)(struct food_s *food, struct game_s *game, struct snake_s *snake, SDL_Renderer *ren);
     void (*intersects_with_snake)(SDL_Rect *foodBoundingRect, struct snake_s *snake);
 };
+
+typedef struct food_s Food;
 
 #endif //C_GAMES_FOOD_H

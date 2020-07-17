@@ -6,7 +6,6 @@
 #define C_GAMES_GAME_H
 
 #include <stdio.h>
-#define SDL_DISABLE_IMMINTRIN_H
 #include <SDL.h>
 #include <SDL_ttf.h>
 #include <stdbool.h>
@@ -16,7 +15,7 @@
 
 #define WINDOW_WIDTH 500
 #define WINDOW_HEIGHT 500
-#define FRAMES_PER_SEC 40
+#define FRAMES_PER_SEC 60
 
 enum gamestatus_e {
     NOT_ACTIVE, ACTIVE, GAME_OVER, PAUSED
@@ -24,19 +23,6 @@ enum gamestatus_e {
 
 enum gamescreen_e {
     INITIAL, BOARD, PAUSE, GAMEOVER
-};
-
-enum collision_target_kind_e {
-    SNAKEPART, FOOD, NOTHING
-};
-
-union collision_target_u {
-    struct snakepart_s *snakepart;
-};
-
-struct collision_s {
-    union collision_target_u *target;
-    enum collision_target_kind_e kind;
 };
 
 struct game_s {
@@ -69,6 +55,11 @@ struct game_s {
 
 };
 
+
 struct game_s *game_new();
+
+typedef struct game_s Game;
+typedef enum gamestatus_e GameStatus;
+typedef enum gamescreen_e GameScreen;
 
 #endif //C_GAMES_GAME_H
