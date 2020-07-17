@@ -20,11 +20,12 @@ Just run `run-windows.bat` in `snake` folder and you are good to go! All the nec
 2. Open a `snake` folder and run `run-mac.sh`
 
 ### Linux
+> TDOO: test on linux
 1. Install tcc, SDL2-dev, and GLEW-dev. Eg. for Debian/Ubuntu:
     ```
    sudo apt install tcc libsdl2-dev libsdl2-ttf-dev libglew-dev
    ```
-   
+
 2. Open a `snake` folder and run `run-linux.sh`
 
 ## More games
