@@ -49,8 +49,8 @@ static void run(Game *game, SDL_Renderer *ren) {
  */
 static void run_gameover(Game *game) {
     game->status = GAME_OVER;
-    free(game->snake);
-    free(game->food);
+    /* free(game->snake); */
+    /* free(game->food); */
     game->initialized = false;
 }
 
